@@ -12,8 +12,8 @@ namespace VTDI_Gate_Log1_flavaSolutions
         static void Main()
         {
             Application.EnableVisualStyles();
-           // Application.Run(new Form1());
-            Application.Run(new vtdi_gateLog_flavaSolutions1());
+           Application.Run(new Login());
+            //Application.Run(new vtdi_gateLog_flavaSolutions1());
         }
     }
 }
