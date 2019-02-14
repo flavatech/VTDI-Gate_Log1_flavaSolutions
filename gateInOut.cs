@@ -24,7 +24,7 @@ namespace VTDI_Gate_Log1_flavaSolutions
             var lastName = tbLname.Text;
             var plateNumber = tbMvLic.Text;
             var motorVehicleType = cbMotorVehicleType.SelectedItem.ToString();
-            var visitorId = tbVisitorId;
+            var visitorId = tbVisitorId.Text;
             var itemsDeclared = cbItemsDeclared.SelectedItem.ToString();
             var purposeOfVisit = cbPurpose.SelectedItem.ToString();
 
@@ -41,13 +41,36 @@ namespace VTDI_Gate_Log1_flavaSolutions
             }
             MessageBox.Show($"First Name: {FirstName}\r \n" +
                 $"Last Name: {lastName}\r \n" +
-                $"Plate Number{plateNumber}\r \n" +
-                $"Motor Vehicle Type{motorVehicleType}\r \n" +
-                $"Visitor ID {visitorId}\r \n" +
-                $"Items Declared {itemsDeclared} \r \n" +
-                $"Purpose of Visit {purposeOfVisit}\r \n" +
-               $"Date and Time In {recordDate}");
+                $"Plate Number: {plateNumber}\r \n" +
+                $"Motor Vehicle Type: {motorVehicleType}\r \n" +
+                $"Visitor ID: {visitorId}\r \n" +
+                $"Items Declared: {itemsDeclared} \r \n" +
+                $"Purpose of Visit: {purposeOfVisit}\r \n" +
+               $"Date and Time In: {recordDate}");
 
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            foreach (Control c in Controls)
+            {
+                if (c is TextBox)
+                {
+                    c.Text = "";
+                }
+            }
+
+
+       }
+
+        private void pbVisitorImage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PBVisitorImage_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

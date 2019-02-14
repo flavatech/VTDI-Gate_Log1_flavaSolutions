@@ -33,14 +33,15 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.tbPassword = new System.Windows.Forms.TextBox();
-            this.tbColorStrip = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblUserLogin = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnForgotPassword = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -83,15 +84,6 @@
             this.tbPassword.Size = new System.Drawing.Size(195, 36);
             this.tbPassword.TabIndex = 1;
             // 
-            // tbColorStrip
-            // 
-            this.tbColorStrip.BackColor = System.Drawing.Color.DarkBlue;
-            this.tbColorStrip.Location = new System.Drawing.Point(-2, -1);
-            this.tbColorStrip.Multiline = true;
-            this.tbColorStrip.Name = "tbColorStrip";
-            this.tbColorStrip.Size = new System.Drawing.Size(883, 84);
-            this.tbColorStrip.TabIndex = 2;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -104,13 +96,14 @@
             // 
             // lblUserLogin
             // 
+            this.lblUserLogin.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUserLogin.AutoSize = true;
             this.lblUserLogin.BackColor = System.Drawing.Color.DarkBlue;
-            this.lblUserLogin.Font = new System.Drawing.Font("Monotype Corsiva", 45F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserLogin.Font = new System.Drawing.Font("Monotype Corsiva", 42F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserLogin.ForeColor = System.Drawing.Color.White;
-            this.lblUserLogin.Location = new System.Drawing.Point(602, 9);
+            this.lblUserLogin.Location = new System.Drawing.Point(619, 8);
             this.lblUserLogin.Name = "lblUserLogin";
-            this.lblUserLogin.Size = new System.Drawing.Size(279, 72);
+            this.lblUserLogin.Size = new System.Drawing.Size(261, 67);
             this.lblUserLogin.TabIndex = 4;
             this.lblUserLogin.Text = "User Login";
             // 
@@ -144,14 +137,27 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 90);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(35, 90);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(835, 380);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(812, 380);
             this.tableLayoutPanel1.TabIndex = 6;
             this.tableLayoutPanel1.Click += new System.EventHandler(this.TableLayoutPanel1_Click);
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanel1_Paint);
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.DarkBlue;
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.lblUserLogin, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(-2, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(883, 84);
+            this.tableLayoutPanel2.TabIndex = 7;
             // 
             // Login
             // 
@@ -161,17 +167,18 @@
             this.ClientSize = new System.Drawing.Size(879, 497);
             this.Controls.Add(this.btnForgotPassword);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.lblUserLogin);
-            this.Controls.Add(this.tbColorStrip);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "Login";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,11 +190,11 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.TextBox tbPassword;
-        private System.Windows.Forms.TextBox tbColorStrip;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblUserLogin;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnForgotPassword;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }
 }
