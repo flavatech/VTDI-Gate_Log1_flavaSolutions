@@ -1,4 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.SqlClient;
+
 using System.Windows.Forms;
 
 namespace VTDI_Gate_Log1_flavaSolutions
@@ -9,6 +18,9 @@ namespace VTDI_Gate_Log1_flavaSolutions
         {
             InitializeComponent();
         }
+        /// Create Connection
+
+
 
         private void CheckedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -16,26 +28,29 @@ namespace VTDI_Gate_Log1_flavaSolutions
         }
 
         private void BtnSubmit_Click(object sender, EventArgs e)
+
         {
-            //var recordDate = DateTime.Now; gets the current date and time.
+         //var recordDate = DateTime.Now; gets the current date and time.
             //Data Validation
             var recordDate = DateTime.Now;
             var FirstName = tbFname.Text;
             var lastName = tbLname.Text;
-            var plateNumber = tbMvLic.Text;
-            var motorVehicleType = cbMotorVehicleType.SelectedItem.ToString();
+            var plateNumber = tbGender.Text;
+            var motorVehicleType = cbMvType.SelectedItem.ToString();
             var visitorId = tbVisitorId.Text;
             var itemsDeclared = cbItemsDeclared.SelectedItem.ToString();
             var purposeOfVisit = cbPurpose.SelectedItem.ToString();
+            /* var VisitorCategory = cbVisitorCategory.ToString();
 
-
+           if (String.IsNullOrEmpty(motorVehicleType))
+            {MessageBox.Show("Motor Vehicle Type is Required!");
+            }*/
             if (String .IsNullOrEmpty(lastName))
 
             {
                 MessageBox.Show("Last Name is Required!");
             }
-            
-             
+
             {
 
             }
@@ -52,25 +67,12 @@ namespace VTDI_Gate_Log1_flavaSolutions
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
-            foreach (Control c in Controls)
-            {
-                if (c is TextBox)
-                {
-                    c.Text = "";
-                }
-            }
-
-
-       }
-
-        private void pbVisitorImage_Click(object sender, EventArgs e)
-        {
 
         }
 
         private void PBVisitorImage_Click_1(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

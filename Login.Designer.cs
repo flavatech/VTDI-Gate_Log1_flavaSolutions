@@ -73,6 +73,7 @@
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(195, 36);
             this.tbUsername.TabIndex = 1;
+            this.tbUsername.Validating += new System.ComponentModel.CancelEventHandler(this.TbUsername_Validating);
             // 
             // tbPassword
             // 
@@ -83,6 +84,7 @@
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(195, 36);
             this.tbPassword.TabIndex = 1;
+            this.tbPassword.Validated += new System.EventHandler(this.TbPassword_Validated);
             // 
             // pictureBox1
             // 

@@ -30,26 +30,34 @@
         {
             this.glblFname = new System.Windows.Forms.Label();
             this.glblLastName = new System.Windows.Forms.Label();
-            this.glblMvLic = new System.Windows.Forms.Label();
+            this.lblGender = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.lblItems = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblPurpose = new System.Windows.Forms.Label();
-            this.cbMotorVehicleType = new System.Windows.Forms.ComboBox();
             this.cbPurpose = new System.Windows.Forms.ComboBox();
             this.tbFname = new System.Windows.Forms.TextBox();
             this.tbLname = new System.Windows.Forms.TextBox();
-            this.tbMvLic = new System.Windows.Forms.TextBox();
+            this.tbGender = new System.Windows.Forms.TextBox();
             this.tbVisitorId = new System.Windows.Forms.TextBox();
-            this.lblVehicleType = new System.Windows.Forms.Label();
+            this.lblEmailAddress = new System.Windows.Forms.Label();
             this.cbItemsDeclared = new System.Windows.Forms.ComboBox();
+            this.lblVisitorCategory = new System.Windows.Forms.Label();
+            this.cbVisitorCategory = new System.Windows.Forms.ComboBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.pBVisitorImage = new System.Windows.Forms.PictureBox();
             this.btnUploadPhoto = new System.Windows.Forms.Button();
+            this.tbEmailAddress = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblMvPlate = new System.Windows.Forms.Label();
+            this.lblMvType = new System.Windows.Forms.Label();
+            this.tbMvPlate = new System.Windows.Forms.TextBox();
+            this.cbMvType = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBVisitorImage)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // glblFname
@@ -74,16 +82,16 @@
             this.glblLastName.TabIndex = 0;
             this.glblLastName.Text = "Last Name";
             // 
-            // glblMvLic
+            // lblGender
             // 
-            this.glblMvLic.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.glblMvLic.AutoSize = true;
-            this.glblMvLic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.glblMvLic.Location = new System.Drawing.Point(3, 104);
-            this.glblMvLic.Name = "glblMvLic";
-            this.glblMvLic.Size = new System.Drawing.Size(110, 40);
-            this.glblMvLic.TabIndex = 0;
-            this.glblMvLic.Text = "Motor Vehicle Registration";
+            this.lblGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblGender.AutoSize = true;
+            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGender.Location = new System.Drawing.Point(3, 114);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(63, 20);
+            this.lblGender.TabIndex = 0;
+            this.lblGender.Text = "Gender";
             // 
             // lblId
             // 
@@ -113,19 +121,21 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.62687F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.37313F));
             this.tableLayoutPanel1.Controls.Add(this.lblPurpose, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.cbMotorVehicleType, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.cbPurpose, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.glblFname, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblItems, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.glblLastName, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblId, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.glblMvLic, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblGender, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.tbFname, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tbLname, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tbMvLic, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tbGender, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.tbVisitorId, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lblVehicleType, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.cbItemsDeclared, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lblVisitorCategory, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.cbVisitorCategory, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.tbEmailAddress, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lblEmailAddress, 0, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(99, 45);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
@@ -150,20 +160,6 @@
             this.lblPurpose.Size = new System.Drawing.Size(68, 20);
             this.lblPurpose.TabIndex = 0;
             this.lblPurpose.Text = "Purpose";
-            // 
-            // cbMotorVehicleType
-            // 
-            this.cbMotorVehicleType.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMotorVehicleType.FormattingEnabled = true;
-            this.cbMotorVehicleType.Items.AddRange(new object[] {
-            "Honda",
-            "Toyota",
-            "Suzuki",
-            "Kia"});
-            this.cbMotorVehicleType.Location = new System.Drawing.Point(119, 154);
-            this.cbMotorVehicleType.Name = "cbMotorVehicleType";
-            this.cbMotorVehicleType.Size = new System.Drawing.Size(189, 32);
-            this.cbMotorVehicleType.TabIndex = 5;
             // 
             // cbPurpose
             // 
@@ -198,15 +194,15 @@
             this.tbLname.Size = new System.Drawing.Size(189, 35);
             this.tbLname.TabIndex = 1;
             // 
-            // tbMvLic
+            // tbGender
             // 
-            this.tbMvLic.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tbMvLic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMvLic.Location = new System.Drawing.Point(119, 107);
-            this.tbMvLic.Multiline = true;
-            this.tbMvLic.Name = "tbMvLic";
-            this.tbMvLic.Size = new System.Drawing.Size(189, 35);
-            this.tbMvLic.TabIndex = 1;
+            this.tbGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tbGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbGender.Location = new System.Drawing.Point(119, 107);
+            this.tbGender.Multiline = true;
+            this.tbGender.Name = "tbGender";
+            this.tbGender.Size = new System.Drawing.Size(189, 35);
+            this.tbGender.TabIndex = 1;
             // 
             // tbVisitorId
             // 
@@ -218,16 +214,16 @@
             this.tbVisitorId.Size = new System.Drawing.Size(189, 30);
             this.tbVisitorId.TabIndex = 1;
             // 
-            // lblVehicleType
+            // lblEmailAddress
             // 
-            this.lblVehicleType.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblVehicleType.AutoSize = true;
-            this.lblVehicleType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVehicleType.Location = new System.Drawing.Point(3, 157);
-            this.lblVehicleType.Name = "lblVehicleType";
-            this.lblVehicleType.Size = new System.Drawing.Size(95, 40);
-            this.lblVehicleType.TabIndex = 0;
-            this.lblVehicleType.Text = "Motor VehicleType";
+            this.lblEmailAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblEmailAddress.AutoSize = true;
+            this.lblEmailAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailAddress.Location = new System.Drawing.Point(3, 157);
+            this.lblEmailAddress.Name = "lblEmailAddress";
+            this.lblEmailAddress.Size = new System.Drawing.Size(68, 40);
+            this.lblEmailAddress.TabIndex = 0;
+            this.lblEmailAddress.Text = "Email Address";
             // 
             // cbItemsDeclared
             // 
@@ -244,6 +240,30 @@
             this.cbItemsDeclared.Name = "cbItemsDeclared";
             this.cbItemsDeclared.Size = new System.Drawing.Size(189, 32);
             this.cbItemsDeclared.TabIndex = 5;
+            // 
+            // lblVisitorCategory
+            // 
+            this.lblVisitorCategory.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblVisitorCategory.AutoSize = true;
+            this.lblVisitorCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVisitorCategory.Location = new System.Drawing.Point(3, 348);
+            this.lblVisitorCategory.Name = "lblVisitorCategory";
+            this.lblVisitorCategory.Size = new System.Drawing.Size(73, 40);
+            this.lblVisitorCategory.TabIndex = 6;
+            this.lblVisitorCategory.Text = "Visitor Category";
+            // 
+            // cbVisitorCategory
+            // 
+            this.cbVisitorCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbVisitorCategory.FormattingEnabled = true;
+            this.cbVisitorCategory.Items.AddRange(new object[] {
+            "Staff",
+            "Student",
+            "Visitor"});
+            this.cbVisitorCategory.Location = new System.Drawing.Point(119, 347);
+            this.cbVisitorCategory.Name = "cbVisitorCategory";
+            this.cbVisitorCategory.Size = new System.Drawing.Size(189, 32);
+            this.cbVisitorCategory.TabIndex = 7;
             // 
             // btnCancel
             // 
@@ -269,17 +289,17 @@
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
-            // button1
+            // btnUpdate
             // 
-            this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(514, 469);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 38);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.BtnSubmit_Click);
+            this.btnUpdate.BackColor = System.Drawing.Color.Yellow;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(514, 469);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(97, 38);
+            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
             // pBVisitorImage
             // 
@@ -301,14 +321,91 @@
             this.btnUploadPhoto.Text = "Upload Photo";
             this.btnUploadPhoto.UseVisualStyleBackColor = true;
             // 
+            // tbEmailAddress
+            // 
+            this.tbEmailAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tbEmailAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEmailAddress.Location = new System.Drawing.Point(119, 160);
+            this.tbEmailAddress.Multiline = true;
+            this.tbEmailAddress.Name = "tbEmailAddress";
+            this.tbEmailAddress.Size = new System.Drawing.Size(189, 35);
+            this.tbEmailAddress.TabIndex = 1;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.3125F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.6875F));
+            this.tableLayoutPanel2.Controls.Add(this.lblMvPlate, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblMvType, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tbMvPlate, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cbMvType, 1, 1);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(457, 338);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(320, 100);
+            this.tableLayoutPanel2.TabIndex = 7;
+            // 
+            // lblMvPlate
+            // 
+            this.lblMvPlate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblMvPlate.AutoSize = true;
+            this.lblMvPlate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMvPlate.Location = new System.Drawing.Point(3, 15);
+            this.lblMvPlate.Name = "lblMvPlate";
+            this.lblMvPlate.Size = new System.Drawing.Size(125, 20);
+            this.lblMvPlate.TabIndex = 1;
+            this.lblMvPlate.Text = "Liscense Plate #";
+            // 
+            // lblMvType
+            // 
+            this.lblMvType.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblMvType.AutoSize = true;
+            this.lblMvType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMvType.Location = new System.Drawing.Point(3, 55);
+            this.lblMvType.Name = "lblMvType";
+            this.lblMvType.Size = new System.Drawing.Size(110, 40);
+            this.lblMvType.TabIndex = 1;
+            this.lblMvType.Text = "Motor Vehicle Type";
+            // 
+            // tbMvPlate
+            // 
+            this.tbMvPlate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tbMvPlate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMvPlate.Location = new System.Drawing.Point(148, 10);
+            this.tbMvPlate.Multiline = true;
+            this.tbMvPlate.Name = "tbMvPlate";
+            this.tbMvPlate.Size = new System.Drawing.Size(160, 30);
+            this.tbMvPlate.TabIndex = 1;
+            // 
+            // cbMvType
+            // 
+            this.cbMvType.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbMvType.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMvType.FormattingEnabled = true;
+            this.cbMvType.Items.AddRange(new object[] {
+            "Honda",
+            "Toyota",
+            "Suzuki",
+            "Ford",
+            "Subaru",
+            "Diahatsu"});
+            this.cbMvType.Location = new System.Drawing.Point(148, 64);
+            this.cbMvType.Name = "cbMvType";
+            this.cbMvType.Size = new System.Drawing.Size(160, 32);
+            this.cbMvType.TabIndex = 2;
+            // 
             // gateInOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 533);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.btnUploadPhoto);
             this.Controls.Add(this.pBVisitorImage);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -317,6 +414,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBVisitorImage)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -325,23 +424,30 @@
 
         private System.Windows.Forms.Label glblFname;
         private System.Windows.Forms.Label glblLastName;
-        private System.Windows.Forms.Label glblMvLic;
+        private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblItems;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox tbFname;
         private System.Windows.Forms.TextBox tbLname;
-        private System.Windows.Forms.TextBox tbMvLic;
+        private System.Windows.Forms.TextBox tbGender;
         private System.Windows.Forms.TextBox tbVisitorId;
         private System.Windows.Forms.Label lblPurpose;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label lblVehicleType;
-        private System.Windows.Forms.ComboBox cbMotorVehicleType;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label lblEmailAddress;
         private System.Windows.Forms.ComboBox cbItemsDeclared;
         private System.Windows.Forms.ComboBox cbPurpose;
         private System.Windows.Forms.PictureBox pBVisitorImage;
         private System.Windows.Forms.Button btnUploadPhoto;
+        private System.Windows.Forms.Label lblVisitorCategory;
+        private System.Windows.Forms.ComboBox cbVisitorCategory;
+        private System.Windows.Forms.TextBox tbEmailAddress;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label lblMvPlate;
+        private System.Windows.Forms.Label lblMvType;
+        private System.Windows.Forms.TextBox tbMvPlate;
+        private System.Windows.Forms.ComboBox cbMvType;
     }
 }
