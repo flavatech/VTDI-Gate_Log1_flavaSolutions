@@ -12,10 +12,10 @@ namespace VTDI_Gate_Log1_flavaSolutions
     using System;
     using System.Collections.Generic;
     
-    public partial class gender
+    public partial class Gender
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public gender()
+        public Gender()
         {
             this.GateLogs = new HashSet<GateLog>();
         }

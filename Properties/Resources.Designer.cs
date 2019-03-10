@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VTDI_Gate_Log1_flavaSolutions.Properties
-{
-
-
+namespace VTDI_Gate_Log1_flavaSolutions.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -66,6 +66,26 @@ namespace VTDI_Gate_Log1_flavaSolutions.Properties
         internal static System.Drawing.Bitmap footer_background_1 {
             get {
                 object obj = ResourceManager.GetObject("footer-background-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_f_check_256_282474 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_f_check_256_282474", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_sign_error_299045 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_sign_error_299045", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

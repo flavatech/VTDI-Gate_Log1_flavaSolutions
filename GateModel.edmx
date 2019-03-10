@@ -4,39 +4,38 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="VTDI_GLog_DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="VTDI_GLog_Db_EditedModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Color">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="GateLog">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ColorID" Type="int" Nullable="false" />
-          <Property Name="TimeIn" Type="datetime" Nullable="false" />
-          <Property Name="TimeOut" Type="datetime" Nullable="false" />
-          <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="MotorVehicleRegistration" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="PurposeID" Type="int" Nullable="false" />
-          <Property Name="ItemsToDeclareId" Type="int" Nullable="false" />
+          <Property Name="ColorID" Type="int" />
+          <Property Name="TimeIn" Type="datetime" />
+          <Property Name="TimeOut" Type="datetime" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="MotorVehicleRegistration" Type="varchar" MaxLength="50" />
+          <Property Name="PurposeID" Type="int" />
+          <Property Name="ItemsToDeclareId" Type="int" />
           <Property Name="Userid" Type="int" />
           <Property Name="VisitorTypeId" Type="int" />
           <Property Name="GenderTypeId" Type="int" />
-          <Property Name="Email Address" Type="varchar" MaxLength="50" />
           <Property Name="VehicleTypeId" Type="int" />
         </EntityType>
-        <EntityType Name="gender">
+        <EntityType Name="Gender">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="ItemsTo Declare">
           <Key>
@@ -57,18 +56,19 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="username" Type="nchar" MaxLength="20" Nullable="false" />
-          <Property Name="password" Type="nchar" MaxLength="20" Nullable="false" />
-          <Property Name="date created" Type="datetime" Nullable="false" />
-          <Property Name="email address" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="genderId" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="email address" Type="varchar" MaxLength="50" />
+          <Property Name="username" Type="nchar" MaxLength="20" />
+          <Property Name="password" Type="nchar" MaxLength="20" />
+          <Property Name="genderId" Type="nchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="Vehicle Type">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Visitor Type">
           <Key>
@@ -78,7 +78,7 @@
           <Property Name="Name" Type="varchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_ColorID">
-          <End Role="Color" Type="Self.Color" Multiplicity="1" />
+          <End Role="Color" Type="Self.Color" Multiplicity="0..1" />
           <End Role="GateLog" Type="Self.GateLog" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Color">
@@ -90,10 +90,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Gender_Type_Id">
-          <End Role="gender" Type="Self.gender" Multiplicity="0..1" />
+          <End Role="Gender" Type="Self.Gender" Multiplicity="0..1" />
           <End Role="GateLog" Type="Self.GateLog" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="gender">
+            <Principal Role="Gender">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="GateLog">
@@ -102,7 +102,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ItemsToDeclareId">
-          <End Role="ItemsTo Declare" Type="Self.ItemsTo Declare" Multiplicity="1" />
+          <End Role="ItemsTo Declare" Type="Self.ItemsTo Declare" Multiplicity="0..1" />
           <End Role="GateLog" Type="Self.GateLog" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ItemsTo Declare">
@@ -114,7 +114,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PurposeId">
-          <End Role="Purpose" Type="Self.Purpose" Multiplicity="1" />
+          <End Role="Purpose" Type="Self.Purpose" Multiplicity="0..1" />
           <End Role="GateLog" Type="Self.GateLog" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Purpose">
@@ -161,10 +161,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="VTDI_GLog_DbModelStoreContainer">
+        <EntityContainer Name="VTDI_GLog_Db_EditedModelStoreContainer">
           <EntitySet Name="Color" EntityType="Self.Color" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GateLog" EntityType="Self.GateLog" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="gender" EntityType="Self.gender" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Gender" EntityType="Self.Gender" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ItemsTo Declare" EntityType="Self.ItemsTo Declare" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Purpose" EntityType="Self.Purpose" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
@@ -175,7 +175,7 @@
             <End Role="GateLog" EntitySet="GateLog" />
           </AssociationSet>
           <AssociationSet Name="FK_Gender_Type_Id" Association="Self.FK_Gender_Type_Id">
-            <End Role="gender" EntitySet="gender" />
+            <End Role="Gender" EntitySet="Gender" />
             <End Role="GateLog" EntitySet="GateLog" />
           </AssociationSet>
           <AssociationSet Name="FK_ItemsToDeclareId" Association="Self.FK_ItemsToDeclareId">
@@ -203,13 +203,13 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="VTDI_GLog_DbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="VTDI_GLog_Db_EditedModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Color">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="GateLogs" Relationship="Self.FK_ColorID" FromRole="Color" ToRole="GateLog" />
         </EntityType>
         <EntityType Name="GateLog">
@@ -217,34 +217,33 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ColorID" Type="Int32" Nullable="false" />
-          <Property Name="TimeIn" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="TimeOut" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MotorVehicleRegistration" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="PurposeID" Type="Int32" Nullable="false" />
-          <Property Name="ItemsToDeclareId" Type="Int32" Nullable="false" />
+          <Property Name="ColorID" Type="Int32" />
+          <Property Name="TimeIn" Type="DateTime" Precision="3" />
+          <Property Name="TimeOut" Type="DateTime" Precision="3" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MotorVehicleRegistration" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PurposeID" Type="Int32" />
+          <Property Name="ItemsToDeclareId" Type="Int32" />
           <Property Name="Userid" Type="Int32" />
           <Property Name="VisitorTypeId" Type="Int32" />
           <Property Name="GenderTypeId" Type="Int32" />
-          <Property Name="Email_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="VehicleTypeId" Type="Int32" />
           <NavigationProperty Name="Color" Relationship="Self.FK_ColorID" FromRole="GateLog" ToRole="Color" />
-          <NavigationProperty Name="gender" Relationship="Self.FK_Gender_Type_Id" FromRole="GateLog" ToRole="gender" />
+          <NavigationProperty Name="Gender" Relationship="Self.FK_Gender_Type_Id" FromRole="GateLog" ToRole="Gender" />
           <NavigationProperty Name="ItemsTo_Declare" Relationship="Self.FK_ItemsToDeclareId" FromRole="GateLog" ToRole="ItemsTo_Declare" />
           <NavigationProperty Name="Purpose" Relationship="Self.FK_PurposeId" FromRole="GateLog" ToRole="Purpose" />
           <NavigationProperty Name="User" Relationship="Self.FK_UserId" FromRole="GateLog" ToRole="Users" />
           <NavigationProperty Name="Vehicle_Type" Relationship="Self.FK_Vehicle_Type_Id" FromRole="GateLog" ToRole="Vehicle_Type" />
           <NavigationProperty Name="Visitor_Type" Relationship="Self.FK_Visitor_Type_Id" FromRole="GateLog" ToRole="Visitor_Type" />
         </EntityType>
-        <EntityType Name="gender">
+        <EntityType Name="Gender">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="GateLogs" Relationship="Self.FK_Gender_Type_Id" FromRole="gender" ToRole="GateLog" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="GateLogs" Relationship="Self.FK_Gender_Type_Id" FromRole="Gender" ToRole="GateLog" />
         </EntityType>
         <EntityType Name="ItemsTo_Declare">
           <Key>
@@ -267,11 +266,12 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="username" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="password" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="date_created" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="email_address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="genderId" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email_address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="username" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="genderId" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="GateLogs" Relationship="Self.FK_UserId" FromRole="Users" ToRole="GateLog" />
         </EntityType>
         <EntityType Name="Vehicle_Type">
@@ -279,7 +279,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="GateLogs" Relationship="Self.FK_Vehicle_Type_Id" FromRole="Vehicle_Type" ToRole="GateLog" />
         </EntityType>
         <EntityType Name="Visitor_Type">
@@ -291,7 +291,7 @@
           <NavigationProperty Name="GateLogs" Relationship="Self.FK_Visitor_Type_Id" FromRole="Visitor_Type" ToRole="GateLog" />
         </EntityType>
         <Association Name="FK_ColorID">
-          <End Role="Color" Type="Self.Color" Multiplicity="1" />
+          <End Role="Color" Type="Self.Color" Multiplicity="0..1" />
           <End Role="GateLog" Type="Self.GateLog" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Color">
@@ -303,10 +303,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Gender_Type_Id">
-          <End Role="gender" Type="Self.gender" Multiplicity="0..1" />
+          <End Role="Gender" Type="Self.Gender" Multiplicity="0..1" />
           <End Role="GateLog" Type="Self.GateLog" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="gender">
+            <Principal Role="Gender">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="GateLog">
@@ -315,7 +315,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ItemsToDeclareId">
-          <End Role="ItemsTo_Declare" Type="Self.ItemsTo_Declare" Multiplicity="1" />
+          <End Role="ItemsTo_Declare" Type="Self.ItemsTo_Declare" Multiplicity="0..1" />
           <End Role="GateLog" Type="Self.GateLog" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ItemsTo_Declare">
@@ -327,7 +327,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PurposeId">
-          <End Role="Purpose" Type="Self.Purpose" Multiplicity="1" />
+          <End Role="Purpose" Type="Self.Purpose" Multiplicity="0..1" />
           <End Role="GateLog" Type="Self.GateLog" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Purpose">
@@ -374,10 +374,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="VTDI_GLog_DbEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="VTDI_GLog_Db_EditedEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Colors" EntityType="Self.Color" />
           <EntitySet Name="GateLogs" EntityType="Self.GateLog" />
-          <EntitySet Name="genders" EntityType="Self.gender" />
+          <EntitySet Name="Genders" EntityType="Self.Gender" />
           <EntitySet Name="ItemsTo_Declares" EntityType="Self.ItemsTo_Declare" />
           <EntitySet Name="Purposes" EntityType="Self.Purpose" />
           <EntitySet Name="Users" EntityType="Self.User" />
@@ -388,7 +388,7 @@
             <End Role="GateLog" EntitySet="GateLogs" />
           </AssociationSet>
           <AssociationSet Name="FK_Gender_Type_Id" Association="Self.FK_Gender_Type_Id">
-            <End Role="gender" EntitySet="genders" />
+            <End Role="Gender" EntitySet="Genders" />
             <End Role="GateLog" EntitySet="GateLogs" />
           </AssociationSet>
           <AssociationSet Name="FK_ItemsToDeclareId" Association="Self.FK_ItemsToDeclareId">
@@ -417,9 +417,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="VTDI_GLog_DbModelStoreContainer" CdmEntityContainer="VTDI_GLog_DbEntities">
+        <EntityContainerMapping StorageEntityContainer="VTDI_GLog_Db_EditedModelStoreContainer" CdmEntityContainer="VTDI_GLog_Db_EditedEntities1">
           <EntitySetMapping Name="Colors">
-            <EntityTypeMapping TypeName="VTDI_GLog_DbModel.Color">
+            <EntityTypeMapping TypeName="VTDI_GLog_Db_EditedModel.Color">
               <MappingFragment StoreEntitySet="Color">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -427,7 +427,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="GateLogs">
-            <EntityTypeMapping TypeName="VTDI_GLog_DbModel.GateLog">
+            <EntityTypeMapping TypeName="VTDI_GLog_Db_EditedModel.GateLog">
               <MappingFragment StoreEntitySet="GateLog">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="ColorID" ColumnName="ColorID" />
@@ -441,21 +441,20 @@
                 <ScalarProperty Name="Userid" ColumnName="Userid" />
                 <ScalarProperty Name="VisitorTypeId" ColumnName="VisitorTypeId" />
                 <ScalarProperty Name="GenderTypeId" ColumnName="GenderTypeId" />
-                <ScalarProperty Name="Email_Address" ColumnName="Email Address" />
                 <ScalarProperty Name="VehicleTypeId" ColumnName="VehicleTypeId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="genders">
-            <EntityTypeMapping TypeName="VTDI_GLog_DbModel.gender">
-              <MappingFragment StoreEntitySet="gender">
+          <EntitySetMapping Name="Genders">
+            <EntityTypeMapping TypeName="VTDI_GLog_Db_EditedModel.Gender">
+              <MappingFragment StoreEntitySet="Gender">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ItemsTo_Declares">
-            <EntityTypeMapping TypeName="VTDI_GLog_DbModel.ItemsTo_Declare">
+            <EntityTypeMapping TypeName="VTDI_GLog_Db_EditedModel.ItemsTo_Declare">
               <MappingFragment StoreEntitySet="ItemsTo Declare">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -463,7 +462,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Purposes">
-            <EntityTypeMapping TypeName="VTDI_GLog_DbModel.Purpose">
+            <EntityTypeMapping TypeName="VTDI_GLog_Db_EditedModel.Purpose">
               <MappingFragment StoreEntitySet="Purpose">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -471,19 +470,20 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="VTDI_GLog_DbModel.User">
+            <EntityTypeMapping TypeName="VTDI_GLog_Db_EditedModel.User">
               <MappingFragment StoreEntitySet="Users">
                 <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="email_address" ColumnName="email address" />
                 <ScalarProperty Name="username" ColumnName="username" />
                 <ScalarProperty Name="password" ColumnName="password" />
-                <ScalarProperty Name="date_created" ColumnName="date created" />
-                <ScalarProperty Name="email_address" ColumnName="email address" />
                 <ScalarProperty Name="genderId" ColumnName="genderId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Vehicle_Types">
-            <EntityTypeMapping TypeName="VTDI_GLog_DbModel.Vehicle_Type">
+            <EntityTypeMapping TypeName="VTDI_GLog_Db_EditedModel.Vehicle_Type">
               <MappingFragment StoreEntitySet="Vehicle Type">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -491,7 +491,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Visitor_Types">
-            <EntityTypeMapping TypeName="VTDI_GLog_DbModel.Visitor_Type">
+            <EntityTypeMapping TypeName="VTDI_GLog_Db_EditedModel.Visitor_Type">
               <MappingFragment StoreEntitySet="Visitor Type">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />

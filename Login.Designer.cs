@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -39,13 +40,17 @@
             this.btnForgotPassword = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.ePUsername = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ePPassword = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ePUsername)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ePPassword)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // lblUsername
-            // 
+            //
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.Location = new System.Drawing.Point(278, 171);
@@ -53,9 +58,9 @@
             this.lblUsername.Size = new System.Drawing.Size(110, 25);
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Username";
-            // 
+            //
             // lblPassword
-            // 
+            //
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.Location = new System.Drawing.Point(278, 231);
@@ -63,9 +68,9 @@
             this.lblPassword.Size = new System.Drawing.Size(106, 25);
             this.lblPassword.TabIndex = 0;
             this.lblPassword.Text = "Password";
-            // 
+            //
             // tbUsername
-            // 
+            //
             this.tbUsername.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUsername.Location = new System.Drawing.Point(429, 160);
@@ -73,10 +78,9 @@
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(195, 36);
             this.tbUsername.TabIndex = 1;
-            this.tbUsername.Validating += new System.ComponentModel.CancelEventHandler(this.TbUsername_Validating);
-            // 
+          
             // tbPassword
-            // 
+            //
             this.tbPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.Location = new System.Drawing.Point(429, 220);
@@ -84,10 +88,9 @@
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(195, 36);
             this.tbPassword.TabIndex = 1;
-            this.tbPassword.Validated += new System.EventHandler(this.TbPassword_Validated);
-            // 
+            //
             // pictureBox1
-            // 
+            //
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -95,9 +98,9 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
+            //
             // lblUserLogin
-            // 
+            //
             this.lblUserLogin.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUserLogin.AutoSize = true;
             this.lblUserLogin.BackColor = System.Drawing.Color.DarkBlue;
@@ -108,9 +111,9 @@
             this.lblUserLogin.Size = new System.Drawing.Size(261, 67);
             this.lblUserLogin.TabIndex = 4;
             this.lblUserLogin.Text = "User Login";
-            // 
+            //
             // btnLogin
-            // 
+            //
             this.btnLogin.BackColor = System.Drawing.Color.Lime;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(308, 334);
@@ -120,9 +123,9 @@
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
-            // 
+            //
             // btnForgotPassword
-            // 
+            //
             this.btnForgotPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnForgotPassword.BackColor = System.Drawing.Color.Gold;
             this.btnForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -132,9 +135,9 @@
             this.btnForgotPassword.TabIndex = 5;
             this.btnForgotPassword.Text = "Forgot password";
             this.btnForgotPassword.UseVisualStyleBackColor = false;
-            // 
+            //
             // tableLayoutPanel1
-            // 
+            //
             this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -147,9 +150,9 @@
             this.tableLayoutPanel1.TabIndex = 6;
             this.tableLayoutPanel1.Click += new System.EventHandler(this.TableLayoutPanel1_Click);
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanel1_Paint);
-            // 
+            //
             // tableLayoutPanel2
-            // 
+            //
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.DarkBlue;
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -160,9 +163,19 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(883, 84);
             this.tableLayoutPanel2.TabIndex = 7;
-            // 
+            //
+            // ePUsername
+            //
+            this.ePUsername.ContainerControl = this;
+            this.ePUsername.Icon = ((System.Drawing.Icon)(resources.GetObject("ePUsername.Icon")));
+            //
+            // ePPassword
+            //
+            this.ePPassword.ContainerControl = this;
+            this.ePPassword.Icon = ((System.Drawing.Icon)(resources.GetObject("ePPassword.Icon")));
+            //
             // Login
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
@@ -181,6 +194,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ePUsername)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ePPassword)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,5 +213,7 @@
         private System.Windows.Forms.Button btnForgotPassword;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.ErrorProvider ePUsername;
+        private System.Windows.Forms.ErrorProvider ePPassword;
     }
 }

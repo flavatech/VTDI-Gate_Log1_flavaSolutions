@@ -13,10 +13,10 @@ namespace VTDI_Gate_Log1_flavaSolutions
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class VTDI_GLog_DbEntities : DbContext
+    public partial class VTDI_GLog_Db_EditedEntities1 : DbContext
     {
-        public VTDI_GLog_DbEntities()
-            : base("name=VTDI_GLog_DbEntities")
+        public VTDI_GLog_Db_EditedEntities1()
+            : base("name=VTDI_GLog_Db_EditedEntities1")
         {
         }
     
@@ -27,7 +27,7 @@ namespace VTDI_Gate_Log1_flavaSolutions
     
         public virtual DbSet<Color> Colors { get; set; }
         public virtual DbSet<GateLog> GateLogs { get; set; }
-        public virtual DbSet<gender> genders { get; set; }
+        public virtual DbSet<Gender> Genders { get; set; }
         public virtual DbSet<ItemsTo_Declare> ItemsTo_Declares { get; set; }
         public virtual DbSet<Purpose> Purposes { get; set; }
         public virtual DbSet<User> Users { get; set; }

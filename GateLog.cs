@@ -15,22 +15,21 @@ namespace VTDI_Gate_Log1_flavaSolutions
     public partial class GateLog
     {
         public int Id { get; set; }
-        public int ColorID { get; set; }
-        public System.DateTime TimeIn { get; set; }
-        public System.DateTime TimeOut { get; set; }
+        public Nullable<int> ColorID { get; set; }
+        public Nullable<System.DateTime> TimeIn { get; set; }
+        public Nullable<System.DateTime> TimeOut { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string MotorVehicleRegistration { get; set; }
-        public int PurposeID { get; set; }
-        public int ItemsToDeclareId { get; set; }
+        public Nullable<int> PurposeID { get; set; }
+        public Nullable<int> ItemsToDeclareId { get; set; }
         public Nullable<int> Userid { get; set; }
         public Nullable<int> VisitorTypeId { get; set; }
         public Nullable<int> GenderTypeId { get; set; }
-        public string Email_Address { get; set; }
         public Nullable<int> VehicleTypeId { get; set; }
     
         public virtual Color Color { get; set; }
-        public virtual gender gender { get; set; }
+        public virtual Gender Gender { get; set; }
         public virtual ItemsTo_Declare ItemsTo_Declare { get; set; }
         public virtual Purpose Purpose { get; set; }
         public virtual User User { get; set; }

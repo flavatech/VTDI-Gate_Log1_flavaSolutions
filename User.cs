@@ -21,10 +21,11 @@ namespace VTDI_Gate_Log1_flavaSolutions
         }
     
         public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string email_address { get; set; }
         public string username { get; set; }
         public string password { get; set; }
-        public System.DateTime date_created { get; set; }
-        public string email_address { get; set; }
         public string genderId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

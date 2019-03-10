@@ -30,7 +30,6 @@ namespace VTDI_Gate_Log1_flavaSolutions
         {
 
         }
-
         private void TableLayoutPanel1_Click(object sender, EventArgs e)
         {
 
@@ -44,7 +43,7 @@ namespace VTDI_Gate_Log1_flavaSolutions
 
 
             //Declare an object of the database Model
-            var datactx = new VTDI_GLog_DbEntities();
+            var datactx = new VTDI_GLog_Db_EditedEntities1();
 
            /*Validate input at the application level
             * Credits Balamurugan1989 Codeproject.com
@@ -66,6 +65,7 @@ namespace VTDI_Gate_Log1_flavaSolutions
             {
 
             //Lambda Expression to check if username and password exists
+
              var userCount = datactx.Users.Count(q => q.username == username && q.password == password);
 
         if      (userCount != 1)
@@ -82,53 +82,10 @@ namespace VTDI_Gate_Log1_flavaSolutions
             }
 
             }
-       // Set Error Icons For Username and password Boxes
-        void TbUsername_Validating(object sender, CancelEventArgs e)
-            {
-                ErrorProvider errorProvider1 = new ErrorProvider();
-                ErrorProvider errorProvider2 = new ErrorProvider();
-                ErrorProvider errorProvider3 = new ErrorProvider();
 
-                var username = tbUsername;
-            if (username.Text == String.Empty)
-            {
-                errorProvider1.SetError(username, "Please enter User name");
-                errorProvider2.SetError(username, "");
-                errorProvider3.SetError(username, "");
-            }
-            else
-            {
-                errorProvider1.SetError(username, "");
-                errorProvider2.SetError(username, "");
-                errorProvider3.SetError(username, "user name Entered");
-            {
-            }
-
-            }
 
         }
+    }
 
-        private void TbPassword_Validated(object sender, EventArgs e)
-        {
-            ErrorProvider errorProvider1 = new ErrorProvider();
-            ErrorProvider errorProvider2 = new ErrorProvider();
-            ErrorProvider errorProvider3 = new ErrorProvider();
-            var password = tbPassword;
-            if (password.Text == String.Empty)
-            {
-                errorProvider1.SetError(password, "Please enter Pass word");
-                errorProvider2.SetError(password, "");
-                errorProvider3.SetError(password, "");
-            }
-            else
-            {
-                errorProvider1.SetError(password, "");
-                errorProvider2.SetError(password, "");
-                errorProvider3.SetError(password, "A password was Entered");
-                {
-                }
-            }
-        }
-     }
-   }
-//
+
+
