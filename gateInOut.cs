@@ -116,7 +116,7 @@ namespace VTDI_Gate_Log1_flavaSolutions
         }
         void clear()
 
-        { //Use Var to typecast to enable use of user friendly names in clear command below.
+        { //Use Var to  enable use of user friendly names in clear command below.
              var Firstname = tbFname;
              var Lastname =  tbLname;
              var Gender = cbGender;
@@ -151,6 +151,19 @@ namespace VTDI_Gate_Log1_flavaSolutions
         {
             clear();
             MessageBox.Show("Form Cleared Successfully");
+        }
+
+        private void FillByToolStripButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.gateLogTableAdapter.FillBy(this.gDataSetForAll.GateLog, motorVehicleRegistrationToolStripTextBox.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

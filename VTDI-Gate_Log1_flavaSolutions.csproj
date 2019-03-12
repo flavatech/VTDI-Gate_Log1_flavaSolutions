@@ -97,6 +97,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GateModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="GDataSetForAll.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GDataSetForAll.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Gender.cs">
       <DependentUpon>GateModel.tt</DependentUpon>
     </Compile>
@@ -166,6 +171,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserMgmt.resx">
+      <DependentUpon>UserMgmt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vtdi_gateLog_flavaSolutions1.resx">
       <DependentUpon>vtdi_gateLog_flavaSolutions1.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +183,17 @@
     </EntityDeploy>
     <None Include="GateModel.edmx.diagram">
       <DependentUpon>GateModel.edmx</DependentUpon>
+    </None>
+    <None Include="GDataSetForAll.xsc">
+      <DependentUpon>GDataSetForAll.xsd</DependentUpon>
+    </None>
+    <None Include="GDataSetForAll.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GDataSetForAll.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GDataSetForAll.xss">
+      <DependentUpon>GDataSetForAll.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

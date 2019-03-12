@@ -74,6 +74,13 @@
             this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
             this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.colorTableAdapter = new VTDI_Gate_Log1_flavaSolutions.VTDI_GLog_Db_EditedDataSet2TableAdapters.ColorTableAdapter();
+            this.gDataSetForAll = new VTDI_Gate_Log1_flavaSolutions.GDataSetForAll();
+            this.gateLogTableAdapter = new VTDI_Gate_Log1_flavaSolutions.GDataSetForAllTableAdapters.GateLogTableAdapter();
+            this.tableAdapterManager = new VTDI_Gate_Log1_flavaSolutions.GDataSetForAllTableAdapters.TableAdapterManager();
+            this.fillByToolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.motorVehicleRegistrationToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.motorVehicleRegistrationToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.fillByToolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vTDIGLogDbEditedDataSetBindingSource)).BeginInit();
@@ -89,6 +96,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.colorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vTDI_GLog_Db_EditedDataSet2)).BeginInit();
             this.fillByToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gDataSetForAll)).BeginInit();
+            this.fillByToolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // glblFname
@@ -96,7 +105,7 @@
             this.glblFname.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.glblFname.AutoSize = true;
             this.glblFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.glblFname.Location = new System.Drawing.Point(3, 14);
+            this.glblFname.Location = new System.Drawing.Point(3, 17);
             this.glblFname.Name = "glblFname";
             this.glblFname.Size = new System.Drawing.Size(86, 20);
             this.glblFname.TabIndex = 0;
@@ -107,7 +116,7 @@
             this.glblLastName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.glblLastName.AutoSize = true;
             this.glblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.glblLastName.Location = new System.Drawing.Point(3, 63);
+            this.glblLastName.Location = new System.Drawing.Point(3, 72);
             this.glblLastName.Name = "glblLastName";
             this.glblLastName.Size = new System.Drawing.Size(86, 20);
             this.glblLastName.TabIndex = 0;
@@ -118,7 +127,7 @@
             this.lblGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.Location = new System.Drawing.Point(3, 115);
+            this.lblGender.Location = new System.Drawing.Point(3, 127);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(63, 20);
             this.lblGender.TabIndex = 0;
@@ -129,7 +138,7 @@
             this.lblItems.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblItems.AutoSize = true;
             this.lblItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItems.Location = new System.Drawing.Point(3, 157);
+            this.lblItems.Location = new System.Drawing.Point(3, 169);
             this.lblItems.Name = "lblItems";
             this.lblItems.Size = new System.Drawing.Size(73, 40);
             this.lblItems.TabIndex = 0;
@@ -161,7 +170,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(335, 309);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(335, 321);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // cbGender
@@ -172,7 +181,7 @@
             this.cbGender.DisplayMember = "name";
             this.cbGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGender.FormattingEnabled = true;
-            this.cbGender.Location = new System.Drawing.Point(119, 109);
+            this.cbGender.Location = new System.Drawing.Point(119, 121);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(189, 32);
             this.cbGender.TabIndex = 8;
@@ -207,7 +216,7 @@
             // 
             this.tbLname.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tbLname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLname.Location = new System.Drawing.Point(119, 55);
+            this.tbLname.Location = new System.Drawing.Point(119, 64);
             this.tbLname.Multiline = true;
             this.tbLname.Name = "tbLname";
             this.tbLname.Size = new System.Drawing.Size(189, 35);
@@ -221,7 +230,7 @@
             this.cbItemsDeclared.DisplayMember = "Name";
             this.cbItemsDeclared.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbItemsDeclared.FormattingEnabled = true;
-            this.cbItemsDeclared.Location = new System.Drawing.Point(119, 161);
+            this.cbItemsDeclared.Location = new System.Drawing.Point(119, 173);
             this.cbItemsDeclared.Name = "cbItemsDeclared";
             this.cbItemsDeclared.Size = new System.Drawing.Size(189, 32);
             this.cbItemsDeclared.TabIndex = 5;
@@ -237,7 +246,7 @@
             this.lblPurpose.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblPurpose.AutoSize = true;
             this.lblPurpose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPurpose.Location = new System.Drawing.Point(3, 218);
+            this.lblPurpose.Location = new System.Drawing.Point(3, 230);
             this.lblPurpose.Name = "lblPurpose";
             this.lblPurpose.Size = new System.Drawing.Size(68, 20);
             this.lblPurpose.TabIndex = 0;
@@ -251,7 +260,7 @@
             this.cbPurpose.DisplayMember = "Name";
             this.cbPurpose.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPurpose.FormattingEnabled = true;
-            this.cbPurpose.Location = new System.Drawing.Point(119, 212);
+            this.cbPurpose.Location = new System.Drawing.Point(119, 224);
             this.cbPurpose.Name = "cbPurpose";
             this.cbPurpose.Size = new System.Drawing.Size(189, 32);
             this.cbPurpose.TabIndex = 2;
@@ -267,7 +276,7 @@
             this.lblVisitorCategory.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblVisitorCategory.AutoSize = true;
             this.lblVisitorCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVisitorCategory.Location = new System.Drawing.Point(3, 261);
+            this.lblVisitorCategory.Location = new System.Drawing.Point(3, 273);
             this.lblVisitorCategory.Name = "lblVisitorCategory";
             this.lblVisitorCategory.Size = new System.Drawing.Size(73, 40);
             this.lblVisitorCategory.TabIndex = 6;
@@ -281,7 +290,7 @@
             this.cbVisitorCategory.DisplayMember = "Name";
             this.cbVisitorCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbVisitorCategory.FormattingEnabled = true;
-            this.cbVisitorCategory.Location = new System.Drawing.Point(119, 265);
+            this.cbVisitorCategory.Location = new System.Drawing.Point(119, 277);
             this.cbVisitorCategory.Name = "cbVisitorCategory";
             this.cbVisitorCategory.Size = new System.Drawing.Size(189, 32);
             this.cbVisitorCategory.TabIndex = 7;
@@ -296,7 +305,7 @@
             // 
             this.tbFname.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tbFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFname.Location = new System.Drawing.Point(119, 6);
+            this.tbFname.Location = new System.Drawing.Point(119, 9);
             this.tbFname.Multiline = true;
             this.tbFname.Name = "tbFname";
             this.tbFname.Size = new System.Drawing.Size(189, 35);
@@ -508,11 +517,67 @@
             // 
             this.colorTableAdapter.ClearBeforeFill = true;
             // 
+            // gDataSetForAll
+            // 
+            this.gDataSetForAll.DataSetName = "GDataSetForAll";
+            this.gDataSetForAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gateLogTableAdapter
+            // 
+            this.gateLogTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ColorTableAdapter = null;
+            this.tableAdapterManager.GateLogTableAdapter = this.gateLogTableAdapter;
+            this.tableAdapterManager.GenderTableAdapter = null;
+            this.tableAdapterManager.ItemsTo_DeclareTableAdapter = null;
+            this.tableAdapterManager.PurposeTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = VTDI_Gate_Log1_flavaSolutions.GDataSetForAllTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsersTableAdapter = null;
+            this.tableAdapterManager.Vehicle_TypeTableAdapter = null;
+            this.tableAdapterManager.Visitor_TypeTableAdapter = null;
+            // 
+            // fillByToolStrip1
+            // 
+            this.fillByToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.motorVehicleRegistrationToolStripLabel,
+            this.motorVehicleRegistrationToolStripTextBox,
+            this.fillByToolStripButton1});
+            this.fillByToolStrip1.Location = new System.Drawing.Point(0, 25);
+            this.fillByToolStrip1.Name = "fillByToolStrip1";
+            this.fillByToolStrip1.Size = new System.Drawing.Size(800, 28);
+            this.fillByToolStrip1.TabIndex = 9;
+            this.fillByToolStrip1.Text = "fillByToolStrip1";
+            // 
+            // motorVehicleRegistrationToolStripLabel
+            // 
+            this.motorVehicleRegistrationToolStripLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.motorVehicleRegistrationToolStripLabel.Name = "motorVehicleRegistrationToolStripLabel";
+            this.motorVehicleRegistrationToolStripLabel.Size = new System.Drawing.Size(57, 25);
+            this.motorVehicleRegistrationToolStripLabel.Text = "Plate #";
+            // 
+            // motorVehicleRegistrationToolStripTextBox
+            // 
+            this.motorVehicleRegistrationToolStripTextBox.Name = "motorVehicleRegistrationToolStripTextBox";
+            this.motorVehicleRegistrationToolStripTextBox.Size = new System.Drawing.Size(126, 28);
+            // 
+            // fillByToolStripButton1
+            // 
+            this.fillByToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillByToolStripButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fillByToolStripButton1.Name = "fillByToolStripButton1";
+            this.fillByToolStripButton1.Size = new System.Drawing.Size(61, 25);
+            this.fillByToolStripButton1.Text = "Search";
+            this.fillByToolStripButton1.Click += new System.EventHandler(this.FillByToolStripButton1_Click);
+            // 
             // gateInOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 533);
+            this.Controls.Add(this.fillByToolStrip1);
             this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.btnUploadPhoto);
@@ -542,6 +607,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.vTDI_GLog_Db_EditedDataSet2)).EndInit();
             this.fillByToolStrip.ResumeLayout(false);
             this.fillByToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gDataSetForAll)).EndInit();
+            this.fillByToolStrip1.ResumeLayout(false);
+            this.fillByToolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -594,5 +662,12 @@
         private VTDI_GLog_Db_EditedDataSet2 vTDI_GLog_Db_EditedDataSet2;
         private System.Windows.Forms.BindingSource colorBindingSource;
         private VTDI_GLog_Db_EditedDataSet2TableAdapters.ColorTableAdapter colorTableAdapter;
+        private GDataSetForAll gDataSetForAll;
+        private GDataSetForAllTableAdapters.GateLogTableAdapter gateLogTableAdapter;
+        private GDataSetForAllTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.ToolStrip fillByToolStrip1;
+        private System.Windows.Forms.ToolStripLabel motorVehicleRegistrationToolStripLabel;
+        private System.Windows.Forms.ToolStripTextBox motorVehicleRegistrationToolStripTextBox;
+        private System.Windows.Forms.ToolStripButton fillByToolStripButton1;
     }
 }
