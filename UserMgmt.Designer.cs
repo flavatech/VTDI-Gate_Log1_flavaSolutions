@@ -84,6 +84,8 @@
             this.firstNameToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.nameToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.colorTableAdapter2 = new VTDI_Gate_Log1_flavaSolutions.VTDI_GLog_Db_EditedDataSet2TableAdapters.ColorTableAdapter();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             idLabel = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
             lastNameLabel = new System.Windows.Forms.Label();
@@ -99,13 +101,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             this.nameToolStrip.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // idLabel
             // 
             idLabel.AutoSize = true;
+            idLabel.BackColor = System.Drawing.Color.Teal;
             idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(21, 81);
+            idLabel.Location = new System.Drawing.Point(8, 32);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(27, 20);
             idLabel.TabIndex = 1;
@@ -115,8 +120,9 @@
             // firstNameLabel
             // 
             firstNameLabel.AutoSize = true;
+            firstNameLabel.BackColor = System.Drawing.Color.Teal;
             firstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            firstNameLabel.Location = new System.Drawing.Point(21, 119);
+            firstNameLabel.Location = new System.Drawing.Point(8, 78);
             firstNameLabel.Name = "firstNameLabel";
             firstNameLabel.Size = new System.Drawing.Size(90, 20);
             firstNameLabel.TabIndex = 3;
@@ -125,8 +131,9 @@
             // lastNameLabel
             // 
             lastNameLabel.AutoSize = true;
+            lastNameLabel.BackColor = System.Drawing.Color.Teal;
             lastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lastNameLabel.Location = new System.Drawing.Point(21, 158);
+            lastNameLabel.Location = new System.Drawing.Point(8, 126);
             lastNameLabel.Name = "lastNameLabel";
             lastNameLabel.Size = new System.Drawing.Size(90, 20);
             lastNameLabel.TabIndex = 5;
@@ -135,8 +142,9 @@
             // email_addressLabel
             // 
             email_addressLabel.AutoSize = true;
+            email_addressLabel.BackColor = System.Drawing.Color.Teal;
             email_addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            email_addressLabel.Location = new System.Drawing.Point(21, 205);
+            email_addressLabel.Location = new System.Drawing.Point(8, 172);
             email_addressLabel.Name = "email_addressLabel";
             email_addressLabel.Size = new System.Drawing.Size(52, 20);
             email_addressLabel.TabIndex = 7;
@@ -145,8 +153,9 @@
             // usernameLabel
             // 
             usernameLabel.AutoSize = true;
+            usernameLabel.BackColor = System.Drawing.Color.Teal;
             usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            usernameLabel.Location = new System.Drawing.Point(21, 246);
+            usernameLabel.Location = new System.Drawing.Point(6, 217);
             usernameLabel.Name = "usernameLabel";
             usernameLabel.Size = new System.Drawing.Size(87, 20);
             usernameLabel.TabIndex = 9;
@@ -155,8 +164,9 @@
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
+            passwordLabel.BackColor = System.Drawing.Color.Teal;
             passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            passwordLabel.Location = new System.Drawing.Point(21, 285);
+            passwordLabel.Location = new System.Drawing.Point(8, 261);
             passwordLabel.Name = "passwordLabel";
             passwordLabel.Size = new System.Drawing.Size(82, 20);
             passwordLabel.TabIndex = 11;
@@ -165,8 +175,9 @@
             // genderIdLabel
             // 
             genderIdLabel.AutoSize = true;
+            genderIdLabel.BackColor = System.Drawing.Color.Teal;
             genderIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            genderIdLabel.Location = new System.Drawing.Point(21, 330);
+            genderIdLabel.Location = new System.Drawing.Point(8, 313);
             genderIdLabel.Name = "genderIdLabel";
             genderIdLabel.Size = new System.Drawing.Size(67, 20);
             genderIdLabel.TabIndex = 13;
@@ -206,6 +217,7 @@
             // usersBindingNavigator
             // 
             this.usersBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.usersBindingNavigator.BackColor = System.Drawing.Color.Teal;
             this.usersBindingNavigator.BindingSource = this.usersBindingSource;
             this.usersBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.usersBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -229,7 +241,7 @@
             this.usersBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.usersBindingNavigator.Name = "usersBindingNavigator";
             this.usersBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.usersBindingNavigator.Size = new System.Drawing.Size(1217, 25);
+            this.usersBindingNavigator.Size = new System.Drawing.Size(1358, 25);
             this.usersBindingNavigator.TabIndex = 0;
             this.usersBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -335,18 +347,17 @@
             // 
             this.tbId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "Id", true));
             this.tbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbId.Location = new System.Drawing.Point(125, 75);
+            this.tbId.Location = new System.Drawing.Point(112, 26);
             this.tbId.Name = "tbId";
             this.tbId.ReadOnly = true;
             this.tbId.Size = new System.Drawing.Size(121, 26);
             this.tbId.TabIndex = 2;
-            this.tbId.Visible = false;
             // 
             // tbFirstName
             // 
             this.tbFirstName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "FirstName", true));
             this.tbFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFirstName.Location = new System.Drawing.Point(125, 113);
+            this.tbFirstName.Location = new System.Drawing.Point(112, 72);
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(121, 26);
             this.tbFirstName.TabIndex = 4;
@@ -355,7 +366,7 @@
             // 
             this.tbLastName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "LastName", true));
             this.tbLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLastName.Location = new System.Drawing.Point(125, 158);
+            this.tbLastName.Location = new System.Drawing.Point(112, 120);
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(121, 26);
             this.tbLastName.TabIndex = 6;
@@ -364,7 +375,7 @@
             // 
             this.tbEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "email address", true));
             this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.Location = new System.Drawing.Point(125, 199);
+            this.tbEmail.Location = new System.Drawing.Point(112, 166);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(121, 26);
             this.tbEmail.TabIndex = 8;
@@ -373,7 +384,7 @@
             // 
             this.tbUsername.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "username", true));
             this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUsername.Location = new System.Drawing.Point(125, 240);
+            this.tbUsername.Location = new System.Drawing.Point(112, 211);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(121, 26);
             this.tbUsername.TabIndex = 10;
@@ -382,7 +393,7 @@
             // 
             this.tbPassword.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "password", true));
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.Location = new System.Drawing.Point(125, 279);
+            this.tbPassword.Location = new System.Drawing.Point(112, 255);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(121, 26);
             this.tbPassword.TabIndex = 12;
@@ -395,7 +406,7 @@
             this.cbGender.DisplayMember = "name";
             this.cbGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGender.FormattingEnabled = true;
-            this.cbGender.Location = new System.Drawing.Point(125, 322);
+            this.cbGender.Location = new System.Drawing.Point(112, 305);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(121, 28);
             this.cbGender.TabIndex = 14;
@@ -408,6 +419,7 @@
             // 
             // usersDataGridView
             // 
+            this.usersDataGridView.AllowUserToOrderColumns = true;
             this.usersDataGridView.AutoGenerateColumns = false;
             this.usersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.usersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -419,9 +431,9 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.usersDataGridView.DataSource = this.usersBindingSource;
-            this.usersDataGridView.Location = new System.Drawing.Point(331, 75);
+            this.usersDataGridView.Location = new System.Drawing.Point(77, 20);
             this.usersDataGridView.Name = "usersDataGridView";
-            this.usersDataGridView.Size = new System.Drawing.Size(776, 333);
+            this.usersDataGridView.Size = new System.Drawing.Size(808, 413);
             this.usersDataGridView.TabIndex = 15;
             // 
             // dataGridViewTextBoxColumn1
@@ -474,41 +486,44 @@
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.Color.LawnGreen;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(152, 393);
+            this.btnSave.Location = new System.Drawing.Point(139, 359);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 30);
             this.btnSave.TabIndex = 16;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // btnNew
             // 
+            this.btnNew.BackColor = System.Drawing.Color.Gold;
             this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.Location = new System.Drawing.Point(30, 393);
+            this.btnNew.Location = new System.Drawing.Point(12, 359);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(94, 30);
             this.btnNew.TabIndex = 16;
             this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.UseVisualStyleBackColor = false;
             this.btnNew.Click += new System.EventHandler(this.BtnNew_Click);
             // 
             // btnDelete
             // 
+            this.btnDelete.BackColor = System.Drawing.Color.Crimson;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(30, 447);
+            this.btnDelete.Location = new System.Drawing.Point(12, 411);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(94, 30);
             this.btnDelete.TabIndex = 16;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(152, 447);
+            this.btnClear.Location = new System.Drawing.Point(139, 411);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(94, 30);
             this.btnClear.TabIndex = 16;
@@ -520,7 +535,7 @@
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(331, 463);
+            this.lblStatus.Location = new System.Drawing.Point(344, 528);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(79, 25);
             this.lblStatus.TabIndex = 17;
@@ -536,13 +551,14 @@
             // 
             // nameToolStrip
             // 
+            this.nameToolStrip.BackColor = System.Drawing.Color.Teal;
             this.nameToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.firstNameToolStripLabel,
             this.firstNameToolStripTextBox,
             this.nameToolStripButton});
             this.nameToolStrip.Location = new System.Drawing.Point(0, 25);
             this.nameToolStrip.Name = "nameToolStrip";
-            this.nameToolStrip.Size = new System.Drawing.Size(1217, 27);
+            this.nameToolStrip.Size = new System.Drawing.Size(1358, 27);
             this.nameToolStrip.TabIndex = 18;
             this.nameToolStrip.Text = "nameToolStrip";
             // 
@@ -571,33 +587,57 @@
             // 
             this.colorTableAdapter2.ClearBeforeFill = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Teal;
+            this.groupBox1.Controls.Add(this.usersDataGridView);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(298, 55);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(960, 456);
+            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "User Display";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Teal;
+            this.groupBox2.Controls.Add(this.btnDelete);
+            this.groupBox2.Controls.Add(this.btnClear);
+            this.groupBox2.Controls.Add(this.tbId);
+            this.groupBox2.Controls.Add(idLabel);
+            this.groupBox2.Controls.Add(this.btnNew);
+            this.groupBox2.Controls.Add(this.btnSave);
+            this.groupBox2.Controls.Add(this.tbFirstName);
+            this.groupBox2.Controls.Add(firstNameLabel);
+            this.groupBox2.Controls.Add(genderIdLabel);
+            this.groupBox2.Controls.Add(this.cbGender);
+            this.groupBox2.Controls.Add(this.tbLastName);
+            this.groupBox2.Controls.Add(lastNameLabel);
+            this.groupBox2.Controls.Add(passwordLabel);
+            this.groupBox2.Controls.Add(this.tbPassword);
+            this.groupBox2.Controls.Add(this.tbEmail);
+            this.groupBox2.Controls.Add(email_addressLabel);
+            this.groupBox2.Controls.Add(usernameLabel);
+            this.groupBox2.Controls.Add(this.tbUsername);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(12, 55);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(264, 456);
+            this.groupBox2.TabIndex = 20;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Enter User Details";
+            // 
             // UserMgmt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1217, 562);
+            this.ClientSize = new System.Drawing.Size(1358, 578);
             this.Controls.Add(this.nameToolStrip);
             this.Controls.Add(this.lblStatus);
-            this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnNew);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.usersDataGridView);
-            this.Controls.Add(idLabel);
-            this.Controls.Add(this.tbId);
-            this.Controls.Add(firstNameLabel);
-            this.Controls.Add(this.tbFirstName);
-            this.Controls.Add(lastNameLabel);
-            this.Controls.Add(this.tbLastName);
-            this.Controls.Add(email_addressLabel);
-            this.Controls.Add(this.tbEmail);
-            this.Controls.Add(usernameLabel);
-            this.Controls.Add(this.tbUsername);
-            this.Controls.Add(passwordLabel);
-            this.Controls.Add(this.tbPassword);
-            this.Controls.Add(genderIdLabel);
-            this.Controls.Add(this.cbGender);
             this.Controls.Add(this.usersBindingNavigator);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.Name = "UserMgmt";
             this.Text = "UserMgmt";
             this.Load += new System.EventHandler(this.UserMgmt_Load);
@@ -611,6 +651,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             this.nameToolStrip.ResumeLayout(false);
             this.nameToolStrip.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -665,5 +708,7 @@
         private System.Windows.Forms.ToolStripTextBox firstNameToolStripTextBox;
         private System.Windows.Forms.ToolStripButton nameToolStripButton;
         private VTDI_GLog_Db_EditedDataSet2TableAdapters.ColorTableAdapter colorTableAdapter2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

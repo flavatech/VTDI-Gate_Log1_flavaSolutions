@@ -81,6 +81,8 @@
             this.motorVehicleRegistrationToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.motorVehicleRegistrationToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.fillByToolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vTDIGLogDbEditedDataSetBindingSource)).BeginInit();
@@ -104,6 +106,7 @@
             // 
             this.glblFname.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.glblFname.AutoSize = true;
+            this.glblFname.BackColor = System.Drawing.Color.Teal;
             this.glblFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.glblFname.Location = new System.Drawing.Point(3, 17);
             this.glblFname.Name = "glblFname";
@@ -115,6 +118,7 @@
             // 
             this.glblLastName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.glblLastName.AutoSize = true;
+            this.glblLastName.BackColor = System.Drawing.Color.Teal;
             this.glblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.glblLastName.Location = new System.Drawing.Point(3, 72);
             this.glblLastName.Name = "glblLastName";
@@ -126,6 +130,7 @@
             // 
             this.lblGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblGender.AutoSize = true;
+            this.lblGender.BackColor = System.Drawing.Color.Teal;
             this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGender.Location = new System.Drawing.Point(3, 127);
             this.lblGender.Name = "lblGender";
@@ -137,6 +142,7 @@
             // 
             this.lblItems.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblItems.AutoSize = true;
+            this.lblItems.BackColor = System.Drawing.Color.Teal;
             this.lblItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblItems.Location = new System.Drawing.Point(3, 169);
             this.lblItems.Name = "lblItems";
@@ -146,6 +152,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Teal;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.62687F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.37313F));
@@ -245,6 +252,7 @@
             // 
             this.lblPurpose.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblPurpose.AutoSize = true;
+            this.lblPurpose.BackColor = System.Drawing.Color.Teal;
             this.lblPurpose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPurpose.Location = new System.Drawing.Point(3, 230);
             this.lblPurpose.Name = "lblPurpose";
@@ -275,6 +283,7 @@
             // 
             this.lblVisitorCategory.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblVisitorCategory.AutoSize = true;
+            this.lblVisitorCategory.BackColor = System.Drawing.Color.Teal;
             this.lblVisitorCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVisitorCategory.Location = new System.Drawing.Point(3, 273);
             this.lblVisitorCategory.Name = "lblVisitorCategory";
@@ -320,7 +329,7 @@
             // 
             this.btnClear.BackColor = System.Drawing.Color.Tomato;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(652, 469);
+            this.btnClear.Location = new System.Drawing.Point(770, 485);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(97, 38);
             this.btnClear.TabIndex = 4;
@@ -332,7 +341,7 @@
             // 
             this.btnSubmit.BackColor = System.Drawing.Color.Lime;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(394, 469);
+            this.btnSubmit.Location = new System.Drawing.Point(534, 485);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(97, 38);
             this.btnSubmit.TabIndex = 4;
@@ -344,7 +353,7 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Yellow;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(514, 469);
+            this.btnUpdate.Location = new System.Drawing.Point(653, 485);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(97, 38);
             this.btnUpdate.TabIndex = 4;
@@ -356,7 +365,7 @@
             // 
             this.pBVisitorImage.BackColor = System.Drawing.SystemColors.ControlDark;
             this.pBVisitorImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pBVisitorImage.Location = new System.Drawing.Point(537, 45);
+            this.pBVisitorImage.Location = new System.Drawing.Point(682, 70);
             this.pBVisitorImage.Name = "pBVisitorImage";
             this.pBVisitorImage.Size = new System.Drawing.Size(212, 170);
             this.pBVisitorImage.TabIndex = 5;
@@ -364,7 +373,7 @@
             // 
             // btnUploadPhoto
             // 
-            this.btnUploadPhoto.Location = new System.Drawing.Point(605, 221);
+            this.btnUploadPhoto.Location = new System.Drawing.Point(744, 256);
             this.btnUploadPhoto.Name = "btnUploadPhoto";
             this.btnUploadPhoto.Size = new System.Drawing.Size(75, 23);
             this.btnUploadPhoto.TabIndex = 6;
@@ -373,6 +382,7 @@
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Teal;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.3125F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.6875F));
@@ -382,7 +392,7 @@
             this.tableLayoutPanel2.Controls.Add(this.cbMvType, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.lblColor, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.cbColor, 1, 2);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(457, 302);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(534, 314);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.08163F));
@@ -395,6 +405,7 @@
             // 
             this.lblMvPlate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblMvPlate.AutoSize = true;
+            this.lblMvPlate.BackColor = System.Drawing.Color.Teal;
             this.lblMvPlate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMvPlate.Location = new System.Drawing.Point(3, 15);
             this.lblMvPlate.Name = "lblMvPlate";
@@ -406,6 +417,7 @@
             // 
             this.lblMvType.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblMvType.AutoSize = true;
+            this.lblMvType.BackColor = System.Drawing.Color.Teal;
             this.lblMvType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMvType.Location = new System.Drawing.Point(3, 52);
             this.lblMvType.Name = "lblMvType";
@@ -441,6 +453,7 @@
             // 
             this.lblColor.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblColor.AutoSize = true;
+            this.lblColor.BackColor = System.Drawing.Color.Teal;
             this.lblColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColor.Location = new System.Drawing.Point(3, 105);
             this.lblColor.Name = "lblColor";
@@ -501,7 +514,7 @@
             this.fillByToolStripButton});
             this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
             this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(800, 25);
+            this.fillByToolStrip.Size = new System.Drawing.Size(987, 25);
             this.fillByToolStrip.TabIndex = 8;
             this.fillByToolStrip.Text = "fillByToolStrip";
             // 
@@ -541,13 +554,14 @@
             // 
             // fillByToolStrip1
             // 
+            this.fillByToolStrip1.BackColor = System.Drawing.Color.Teal;
             this.fillByToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.motorVehicleRegistrationToolStripLabel,
             this.motorVehicleRegistrationToolStripTextBox,
             this.fillByToolStripButton1});
             this.fillByToolStrip1.Location = new System.Drawing.Point(0, 25);
             this.fillByToolStrip1.Name = "fillByToolStrip1";
-            this.fillByToolStrip1.Size = new System.Drawing.Size(800, 28);
+            this.fillByToolStrip1.Size = new System.Drawing.Size(987, 28);
             this.fillByToolStrip1.TabIndex = 9;
             this.fillByToolStrip1.Text = "fillByToolStrip1";
             // 
@@ -572,11 +586,31 @@
             this.fillByToolStripButton1.Text = "Search";
             this.fillByToolStripButton1.Click += new System.EventHandler(this.FillByToolStripButton1_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Teal;
+            this.groupBox1.Location = new System.Drawing.Point(33, 70);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(460, 470);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Teal;
+            this.groupBox2.Location = new System.Drawing.Point(519, 70);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(436, 470);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
             // gateInOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 533);
+            this.ClientSize = new System.Drawing.Size(987, 567);
             this.Controls.Add(this.fillByToolStrip1);
             this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.tableLayoutPanel2);
@@ -586,6 +620,8 @@
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Name = "gateInOut";
             this.Text = "gateInOut";
             this.Load += new System.EventHandler(this.GateInOut_Load);
@@ -669,5 +705,7 @@
         private System.Windows.Forms.ToolStripLabel motorVehicleRegistrationToolStripLabel;
         private System.Windows.Forms.ToolStripTextBox motorVehicleRegistrationToolStripTextBox;
         private System.Windows.Forms.ToolStripButton fillByToolStripButton1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

@@ -71,7 +71,7 @@ namespace VTDI_Gate_Log1_flavaSolutions
             var motorVehicleType = cbMvType.SelectedValue;
             var plateNum = tbMvPlate.Text;
             var Color = cbColor.SelectedValue;
-            var TimeIn= DateTime.Now;
+            var TimeIn = DateTime.Now;
 
 
 
@@ -85,35 +85,44 @@ namespace VTDI_Gate_Log1_flavaSolutions
 
             {
                 MessageBox.Show("First name and Last Name is Required!");
+                this.Show();
             }
 
-            /*Create an variable of the table which you are bout the store
-             the data in. Get this from your database.*/
-            //You could also use Gatelog record = new Gatelog();
-            //var record = new GateLog();
-            GateLog record = new GateLog();
+            else
 
-          //Populate the fields in the object
-            record.FirstName = firstName;
-            record.LastName = lastName;
-            record.GenderTypeId = int.Parse(gender.ToString());
-            record.ItemsToDeclareId = int.Parse(itemsDeclared.ToString());
-            record.PurposeID = int.Parse(purposeOfVisit.ToString());
-            record.VisitorTypeId = int.Parse(visitorCategory.ToString());
-            record.VehicleTypeId = int.Parse(motorVehicleType.ToString());
-            record.MotorVehicleRegistration = plateNum;
-            record.ColorID = int.Parse(Color.ToString());
-            record.TimeIn = TimeIn;
-            string s = TimeIn.ToString(); // dd/MM/yyyy hh:mm
-
-            //Add the record (or object) to the table and save changes
-            ginctx.GateLogs.Add(record);
-            ginctx.SaveChanges();
-            clear();
-            MessageBox.Show("Data Entered Successfully");
+            {
 
 
-        }
+
+                /*Create an variable of the table which you are bout the store
+                 the data in. Get this from your database.*/
+                //You could also use Gatelog record = new Gatelog();
+                //var record = new GateLog();
+                GateLog record = new GateLog();
+
+                //Populate the fields in the object
+                record.FirstName = firstName;
+                record.LastName = lastName;
+                record.GenderTypeId = int.Parse(gender.ToString());
+                record.ItemsToDeclareId = int.Parse(itemsDeclared.ToString());
+                record.PurposeID = int.Parse(purposeOfVisit.ToString());
+                record.VisitorTypeId = int.Parse(visitorCategory.ToString());
+                record.VehicleTypeId = int.Parse(motorVehicleType.ToString());
+                record.MotorVehicleRegistration = plateNum;
+                record.ColorID = int.Parse(Color.ToString());
+                record.TimeIn = TimeIn;
+                string s = TimeIn.ToString(); // dd/MM/yyyy hh:mm
+
+                //Add the record (or object) to the table and save changes
+                ginctx.GateLogs.Add(record);
+                ginctx.SaveChanges();
+                clear();
+                MessageBox.Show("Data Entered Successfully");
+
+                }
+
+            }
+
         void clear()
 
         { //Use Var to  enable use of user friendly names in clear command below.
